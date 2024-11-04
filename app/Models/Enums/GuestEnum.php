@@ -32,4 +32,5 @@ interface GuestEnum
     ];
 
     public const NO_GUEST = 'Такого гостя нет';
+    public const GUEST_DELETED = 'Гость удалён успешно';
 }

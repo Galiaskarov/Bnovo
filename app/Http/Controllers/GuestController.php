@@ -80,7 +80,7 @@ class GuestController extends Controller
     {
         try {
             $guest = $this->guestService->deleteGuest($id);
-            return response()->json(['message' => 'Гость удалён успешно', 'data' => new GuestResource($guest)]);
+            return response()->json(['message' => GuestEnum::GUEST_DELETED, 'data' => new GuestResource($guest)]);
         } catch (\Exception $exception) {
             return response()->json(['message' => GuestEnum::NO_GUEST, 'error' => $exception->getMessage()], JsonResponse::HTTP_NOT_FOUND, [], JSON_UNESCAPED_UNICODE);
         }
